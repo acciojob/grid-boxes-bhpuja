@@ -1,1 +1,50 @@
 /*  your css code here. If applicable */
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar takes 1 fraction, main content takes 3 fractions */
+  grid-template-rows: auto 1fr auto; /* Header is auto-sized, main content takes remaining space, footer is auto-sized */
+  gap: 10px; /* Gap between grid items */
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer"; /* Layout areas definition */
+  padding: 10px;
+}
+
+/* Grid items */
+.grid-item {
+  padding: 20px;
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.main {
+  grid-area: main;
+  background-color: #f2f2f2;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ddd;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #4CAF50;
+  color: white;
+}
